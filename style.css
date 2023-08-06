@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    /* background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(bakground.webp);
+    background-size: cover; */
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background1.jpg);
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2% 6%;
+    background: transparent;
+}
+nav .gg-chevron-right-r{
+    display: none;
+}
+nav .gg-menu{
+    display: none;
+}
+nav img{
+    width: 120px;
+    border-radius: 100%;
+    padding: 2% 5%;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: antiquewhite;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300; 
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    transition: 0.5s;
+    margin: auto;
+    display: block;
+    background: cyan;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav a{
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    color: antiquewhite;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    align-items: center; 
+    /* top: 50%; */
+}
+
+.first h1{
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: rgb(225, 138, 24);
+    font-size: 24px;
+    word-spacing: 8px;
+    line-height: 30px;
+}
+.first p{
+    width: 80%;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: rgb(248, 245, 241);
+    font-size: 18px;
+    text-decoration: dotted;
+    padding-top: 10%;
+    word-spacing: 5px;
+    line-height: 30px;
+}
+.second{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.second h1{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    font-size: 24px;
+    
+}
+.second p{
+    font-size: 20px;
+    margin-top: 5%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    flex-flow: row wrap;
+}
+.col1{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.col1 img{
+    width: 100%;
+    display: block;
+    height: 600px;
+}
+h3{
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+/* .col1:hover{
+    box-shadow: 0px 0px 20px 0px rgba(8, 8, 8, 0.4);
+} */
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 600;
+    color: antiquewhite;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.third{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.col2{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    box-sizing: border-box;
+    flex-basis: 31%;
+    padding: 20px 12px;
+    margin-bottom: 5%;
+    flex: 0 1 20%;
+    background: transparent;
+    transition: 0.5s;
+}
+.col2:hover{
+    background: rgba(226, 0, 0, 0.7);
+    box-shadow: 0px 0px 20px 0px rgba(8, 8, 8, 0.4);
+}
+.col2 img{
+    width: 100%;
+    border-radius: 10px;
+}
+.col2 h3{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* mobile view */
+@media(max-width: 750px){
+    .first h1{
+        font-size: 20px;
+    }
+    .first p{
+        margin: 10px 0 30px;
+        font-size: 10px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgb(183, 87, 28);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .gg-menu{
+        display: block;
+        color: antiquewhite;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    nav .gg-chevron-right-r{
+        display: block;
+        color: antiquewhite;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .row{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        align-content: space-between;
+        margin-top: 5%;
+    }
+}
